@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Outfit } from "next/font/google";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { Preloader } from "@/components/site/Preloader";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -40,6 +41,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${outfit.variable}`}>
       <body className="font-sans antialiased">
+        <noscript>
+          <style>{`.preloader{display:none !important}`}</style>
+        </noscript>
+        <Preloader />
         <div className="grain" aria-hidden="true" />
         <Nav />
         <main>{children}</main>
