@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mahika — Our Plan for Your Website</title>
+<style>
+  :root{
+    --cream:#FBF7F1;
+    --cream-deep:#F3EBDF;
+    --ink:#3B332B;
+    --ink-soft:#6B6056;
+    --blush:#D98B8B;
+    --sage:#8FA98C;
+    --gold:#C2A36B;
+    --line:#E4D8C7;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    font-size:13.5px;
+    line-height:1.65;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    padding:46px 54px 60px;
+  }
+  h1,h2,h3,.wordmark{font-family:Georgia,"Times New Roman",serif;font-weight:normal;}
+
+  /* Header */
+  .head{text-align:center;padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:30px;}
+  .wordmark{
+    font-size:40px;letter-spacing:14px;margin:0 0 6px;color:var(--ink);
+    text-indent:14px;
+  }
+  .tag{font-size:10.5px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin:0;}
+  .doc-title{font-size:21px;color:var(--ink);margin:24px 0 4px;font-style:italic;}
+  .doc-sub{color:var(--ink-soft);font-size:12.5px;margin:0;}
+
+  /* Sections */
+  section{margin:0 0 26px;}
+  h2{
+    font-size:18px;color:var(--ink);margin:0 0 4px;
+    display:flex;align-items:center;gap:12px;
+  }
+  h2::before{content:"";display:inline-block;width:22px;height:2px;background:var(--blush);flex:0 0 auto;}
+  .lead{color:var(--ink-soft);font-style:italic;margin:0 0 14px;font-size:12.5px;}
+  p{margin:0 0 11px;}
+
+  ul{margin:0 0 12px;padding:0;list-style:none;}
+  li{position:relative;padding-left:22px;margin:0 0 8px;}
+  li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--sage);}
+  ol{margin:0 0 12px;padding-left:22px;}
+  ol li{padding-left:6px;}
+  ol li::before{display:none;}
+
+  .card{
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 22px;
+    margin:0 0 14px;
+  }
+  .card.blush{background:#F7ECE9;border-color:#EAD3CE;}
+  .card.sage{background:#EEF1EA;border-color:#D8E0D2;}
+
+  .steps{counter-reset:s;list-style:none;padding:0;}
+  .steps li{padding-left:40px;margin-bottom:10px;}
+  .steps li::before{
+    counter-increment:s;content:counter(s);
+    left:0;top:0;width:24px;height:24px;border-radius:50%;
+    background:var(--gold);color:#fff;
+    font-family:Georgia,serif;font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .oneline{
+    text-align:center;font-family:Georgia,serif;font-style:italic;
+    font-size:16px;line-height:1.6;color:var(--ink);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:22px 10px;margin:30px 0 18px;
+  }
+  .close{text-align:center;color:var(--ink-soft);font-size:13px;}
+  .emph{color:var(--blush);font-weight:600;}
+  strong{color:var(--ink);}
+  .foot{text-align:center;color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-top:34px;}
+
+  @page{size:A4;margin:14mm;}
+  @media print{ .page{padding:0 6px;} section{break-inside:avoid;} .card,.oneline{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="head">
+    <p class="wordmark">MAHIKA</p>
+    <p class="tag">made to measure &nbsp;·&nbsp; kerala</p>
+    <p class="doc-title">Our Plan for Your Website</p>
+    <p class="doc-sub">A simple note to explain what we're thinking — and to check we're on the right track before we start.</p>
+  </div>
+
+  <section>
+    <h2>First, what we understand about Mahika</h2>
+    <p class="lead">We spent time going through your Instagram. Please tell us if we've got it right.</p>
+    <div class="card">
+      <ul>
+        <li>You make <strong>beautiful designer dresses for women</strong>, in lovely fabrics like Chanderi, cotton, linen, muslin and organza — with <strong>hand embroidery and thread work</strong>.</li>
+        <li>Your biggest strength: you <strong>make dresses to fit each customer</strong> — custom size, custom colour. Most shops don't do this.</li>
+        <li>Customers buy for <strong>real moments</strong> — Easter &amp; church, baptisms, festivals, weddings, office, and everyday wear.</li>
+        <li>Today everything happens over <strong>Instagram DM and WhatsApp</strong> — customers message to ask the price, and you reply one by one.</li>
+        <li>You deliver <strong>across Kerala</strong>, and you've just <strong>opened your shop</strong> — congratulations! 🎉</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>What's slowing things down today</h2>
+    <p>Nothing is broken — your business works. But a few things make it harder than it needs to be:</p>
+    <ol>
+      <li><strong>Customers can't see prices.</strong> Everyone must message you just to ask. That's a lot of replying — and some give up before asking.</li>
+      <li><strong>There's no proper place to see all your dresses.</strong> On Instagram, older dresses get buried and can't be searched by occasion, colour or fabric.</li>
+      <li><strong>You can only sell in Kerala.</strong> Malayali women across India would love your dresses but can't reach you.</li>
+      <li><strong>Mahika has no "home" online yet</strong> — a place that looks premium and feels like your brand.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What we want to build for you</h2>
+    <p>A <strong>website of your own</strong> — think of it as your shop, open 24 hours, that anyone can visit.</p>
+    <ul>
+      <li><strong>All your dresses in one beautiful place, with clear prices.</strong></li>
+      <li>Customers <strong>browse easily</strong> — by occasion, colour, fabric, size.</li>
+      <li>They pick their <strong>custom size and choices right on the website</strong>.</li>
+      <li>Then they <strong>finish the order on your WhatsApp — just like now.</strong> The website does the hard part; the order lands in your WhatsApp neatly.</li>
+    </ul>
+    <div class="card blush">
+      <p style="margin:0;">You keep the part that works — the <span class="emph">personal WhatsApp conversation</span> — and the website removes the tiring part: answering "what's the price?" and "is it available?" a hundred times.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>We'll protect what makes Mahika special</h2>
+    <p>Your made-to-measure service is your heart, so the website is built around it:</p>
+    <ul>
+      <li>The customer gives her <strong>key measurements</strong> on the site (a simple "how to measure" guide helps her get it right at home).</li>
+      <li>She picks her <strong>colour and any changes</strong> she wants.</li>
+      <li>The fine details — embroidery, final fit, delivery date — you still confirm <strong>personally on WhatsApp</strong>.</li>
+      <li>Since each dress is made specially for her, it <strong>can't be returned</strong> — but we offer <strong>one free fit adjustment</strong>, so she feels safe ordering.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The look and feel we're imagining</h2>
+    <p>Soft, elegant, and premium — like your dresses.</p>
+    <ul>
+      <li>Warm, gentle colours taken from your own outfits — creams, soft pinks, greens.</li>
+      <li>Beautiful close-up photos of the <strong>fabric and hand work</strong>, so people can almost feel the quality.</li>
+      <li>Calm and graceful — <strong>not loud or cluttered</strong>. Like walking into a lovely boutique.</li>
+    </ul>
+    <div class="card sage">
+      <p style="margin:0;">We'd also tidy the brand name. Today it shows as both "Mahika Creations" and "Mahika Designs." We suggest simply <strong>Mahika</strong> — clean, premium, easy to remember.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How we'll roll it out — one step at a time</h2>
+    <p>We won't do everything at once. We'll build in calm, sensible steps:</p>
+    <ol class="steps">
+      <li><strong>Get the look right</strong> — name, logo, colours, and good photos.</li>
+      <li><strong>Build the dress collection page</strong> with prices — the heart of the site.</li>
+      <li><strong>Add the made-to-measure (custom size) feature.</strong></li>
+      <li><strong>Connect it to your WhatsApp</strong> so orders arrive cleanly.</li>
+      <li><strong>Go live</strong> and point your Instagram to the website.</li>
+      <li><strong>Open up to all of India</strong> — to sell beyond Kerala.</li>
+    </ol>
+    <p>We start with <strong>Kerala</strong> (what you do today) and grow to <strong>all of India</strong> once everything runs smoothly.</p>
+  </section>
+
+  <section>
+    <h2>A few things we'd love you to confirm</h2>
+    <div class="card">
+      <ol>
+        <li><strong>Are we understanding your business correctly?</strong> (The dresses, the customers, the custom-fit service.)</li>
+        <li><strong>Showing prices openly</strong> — are you comfortable? This is the single biggest thing that saves your time and brings more orders. (Special/bridal pieces can stay "price on request.")</li>
+        <li><strong>The name "Mahika"</strong> — do you like it as the main brand name?</li>
+        <li><strong>Photos</strong> — do you have good clear photos, or should we plan a small shoot?</li>
+        <li><strong>Selling across India later</strong> — is that a direction you want to grow towards?</li>
+      </ol>
+    </div>
+  </section>
+
+  <p class="oneline">
+    We want to give Mahika its own beautiful online home — where customers can see your<br>
+    dresses and prices, choose their custom fit, and order through your WhatsApp —<br>
+    so you sell more, with less effort, to more people.
+  </p>
+
+  <p class="close"><strong>Does this feel right to you?</strong> Tell us what you love, what you'd change, and anything we've misunderstood.<br>We'll adjust before we build a single thing. 💛</p>
+
+  <p class="foot">Mahika · made to measure · kerala</p>
+
+</div>
+</body>
+</html>

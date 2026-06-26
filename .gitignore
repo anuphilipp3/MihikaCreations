@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+build
+dist
+.sanity
+next-env.d.ts
+.DS_Store
+*.pem
+.env
+.env*.local
+.vercel
+*.tsbuildinfo
+
+# Local tooling, not part of the app
+.claude/settings.local.json
+.impeccable/

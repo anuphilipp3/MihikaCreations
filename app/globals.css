@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Canvas + surfaces */
+  --color-ivory: #f6f2ea;
+  --color-cream: #fbf8f2;
+  --color-line: #e4ddd0;
+
+  /* Brand darks (forest-led, not espresso) */
+  --color-ink: #232a24;
+  --color-forest: #2e3d32;
+  --color-muted: #6b675d;
+
+  /* The single locked accent: deep onion-rose */
+  --color-rose: #9e4861;
+  --color-rose-soft: #ead9de;
+
+  /* Secondary brand tone, used sparingly (never as a CTA) */
+  --color-sage: #7f8e76;
+
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-outfit);
+
+  --radius-xs: 2px;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-ink);
+}
+
+/* Editorial display defaults */
+.font-display {
+  font-feature-settings: "liga" 1, "dlig" 1;
+  letter-spacing: -0.01em;
+}
+
+/* Faint paper grain for atmosphere (fixed, never on scroll containers) */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background: var(--color-rose);
+  color: var(--color-cream);
+}
