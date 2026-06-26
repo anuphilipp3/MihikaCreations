@@ -18,6 +18,9 @@
   /* Secondary brand tone, used sparingly (never as a CTA) */
   --color-sage: #7f8e76;
 
+  /* The wordmark's native champagne-gold — for use on dark surfaces only */
+  --color-gold: #c9ba8e;
+
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-outfit);
 

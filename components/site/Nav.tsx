@@ -5,6 +5,7 @@ import { useState } from "react";
 import { List, X, WhatsappLogo } from "@phosphor-icons/react";
 import { BRAND } from "@/lib/brand";
 import { waEnquiry } from "@/lib/whatsapp";
+import { Wordmark } from "./Wordmark";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -21,11 +22,9 @@ export function Nav() {
         aria-label="Main navigation"
         className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:px-8"
       >
-        <Link href="/" className="flex flex-col leading-none" onClick={() => setOpen(false)}>
-          <span className="font-display text-2xl tracking-[0.32em] text-ink">
-            MAHIKA
-          </span>
-          <span className="mt-0.5 text-[10px] uppercase tracking-[0.28em] text-muted">
+        <Link href="/" className="flex flex-col gap-1.5 leading-none" onClick={() => setOpen(false)}>
+          <Wordmark className="h-6 w-[84px] text-ink" />
+          <span className="text-[10px] uppercase tracking-[0.28em] text-muted">
             Made-to-measure
           </span>
         </Link>

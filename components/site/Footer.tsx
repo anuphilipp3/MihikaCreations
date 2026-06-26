@@ -2,13 +2,14 @@ import Link from "next/link";
 import { InstagramLogo, WhatsappLogo, MapPin } from "@phosphor-icons/react/dist/ssr";
 import { BRAND } from "@/lib/brand";
 import { waEnquiry } from "@/lib/whatsapp";
+import { Wordmark } from "./Wordmark";
 
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-line bg-cream">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1fr] md:px-8">
         <div>
-          <p className="font-display text-3xl tracking-[0.28em] text-ink">MAHIKA</p>
+          <Wordmark className="h-9 w-[124px] text-ink" />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
             Made-to-measure designer wear from Kerala, crafted for women who
             dress for real life and real occasions.
