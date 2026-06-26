@@ -23,7 +23,7 @@ export function Nav() {
         className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:px-8"
       >
         <Link href="/" className="flex flex-col gap-1.5 leading-none" onClick={() => setOpen(false)}>
-          <Wordmark className="h-6 w-[84px] text-ink" />
+          <Wordmark className="h-8 w-[112px] text-ink" />
           <span className="text-[10px] uppercase tracking-[0.28em] text-muted">
             Made-to-measure
           </span>
