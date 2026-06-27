@@ -21,6 +21,9 @@ export function Footer() {
           <Link href="/collection" className="text-muted transition-colors hover:text-ink">
             The collection
           </Link>
+          <Link href="/blog" className="text-muted transition-colors hover:text-ink">
+            The journal
+          </Link>
           <Link href="/visit" className="text-muted transition-colors hover:text-ink">
             Visit the store
           </Link>
