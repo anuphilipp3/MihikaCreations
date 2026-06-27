@@ -114,6 +114,14 @@ export const product = defineType({
       initialValue: false,
     }),
     defineField({
+      name: "stock",
+      title: "Pieces available",
+      type: "number",
+      description:
+        "Leave blank for made-to-order (always available). Set a number for ready-to-wear pieces — 5 or fewer shows 'Only N left', and 0 shows 'Out of stock'.",
+      validation: (r) => r.min(0).integer(),
+    }),
+    defineField({
       name: "displayOrder",
       title: "Display order",
       type: "number",

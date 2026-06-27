@@ -6,7 +6,7 @@ import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import { OrderPanel } from "@/components/product/OrderPanel";
 import { ProductCard } from "@/components/product/ProductCard";
 import { getAllProducts, getProductBySlug, getProductSlugs } from "@/lib/catalog";
-import { formatINR, OCCASION_LABELS } from "@/lib/products";
+import { formatINR, OCCASION_LABELS, stockBadge } from "@/lib/products";
 
 export const revalidate = 60;
 
@@ -89,10 +89,26 @@ export default async function ProductPage({
             {product.fabric} · {product.silhouette}
           </p>
 
-          <p className="mt-5 text-2xl text-ink">
-            <span className="text-base text-muted">from </span>
-            {formatINR(product.price)}
-          </p>
+          <div className="mt-5 flex items-baseline gap-4">
+            <p className="text-2xl text-ink">
+              <span className="text-base text-muted">from </span>
+              {formatINR(product.price)}
+            </p>
+            {(() => {
+              const stock = stockBadge(product.stock);
+              if (!stock) return null;
+              return (
+                <span
+                  className={
+                    "text-[11px] uppercase tracking-[0.16em] " +
+                    (stock.tone === "out" ? "text-muted" : "text-rose")
+                  }
+                >
+                  {stock.label}
+                </span>
+              );
+            })()}
+          </div>
 
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
             {product.description}

@@ -51,6 +51,7 @@ async function run() {
       description: p.description,
       bestSeller: Boolean(p.bestSeller),
       isNew: Boolean(p.isNew),
+      ...(p.stock !== undefined ? { stock: p.stock } : {}),
       image: {
         _type: "image",
         asset: { _type: "reference", _ref: asset._id },

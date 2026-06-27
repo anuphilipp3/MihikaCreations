@@ -48,7 +48,21 @@ export type Product = {
   image: string;
   bestSeller?: boolean;
   isNew?: boolean;
+  /** Pieces available for ready-to-wear. Omit for made-to-order (always available); 0 = out of stock. */
+  stock?: number;
 };
+
+export const LOW_STOCK_THRESHOLD = 5;
+
+export type StockBadge = { label: string; tone: "out" | "low" };
+
+/** Returns a stock badge for ready-to-wear pieces, or null for made-to-order. */
+export function stockBadge(stock: number | undefined | null): StockBadge | null {
+  if (stock === undefined || stock === null) return null;
+  if (stock <= 0) return { label: "Out of stock", tone: "out" };
+  if (stock <= LOW_STOCK_THRESHOLD) return { label: `Only ${stock} left`, tone: "low" };
+  return null;
+}
 
 export const OCCASION_LABELS: Record<Occasion, string> = {
   everyday: "Everyday",
@@ -278,6 +292,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Wearing a kaftan feels like wrapping yourself in comfort while still carrying real class and charm. In soft modal, also available in elegant black. Customisation available.",
     image: "/products/modal-kaftan.jpg",
+    stock: 4, // demo: shows "Only 4 left" — edit/remove in Sanity
   },
   {
     slug: "chanderi-aline",
@@ -334,6 +349,7 @@ export const PRODUCTS: Product[] = [
     description:
       "A light, breezy cotton A-line with a loose umbrella cut and detachable lining, the dress that saves your sunniest, busiest days.",
     image: "/products/cotton-umbrella-aline.jpg",
+    stock: 0, // demo: shows "Out of stock" — edit/remove in Sanity
   },
   {
     slug: "cotton-aline-frock",

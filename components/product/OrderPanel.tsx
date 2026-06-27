@@ -25,6 +25,31 @@ export function OrderPanel({ product }: { product: Product }) {
   const setM = (k: keyof Measure, v: string) =>
     setMeasure((prev) => ({ ...prev, [k]: v }));
 
+  if (product.stock === 0) {
+    return (
+      <div className="flex flex-col gap-4">
+        <div className="rounded-xs border border-line bg-cream px-5 py-4">
+          <p className="text-sm font-medium text-ink">Currently out of stock</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            This piece is sold out right now. Message us and we&rsquo;ll tell you
+            when it&rsquo;s back, or ask about a made-to-order version.
+          </p>
+        </div>
+        <a
+          href={waLink(
+            `Hi Mahika! Is "${product.name}" (${product.fabric} ${product.silhouette}) back in stock, or can it be made to order?`,
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2.5 rounded-xs bg-forest px-6 py-4 text-sm uppercase tracking-[0.16em] text-cream transition-transform hover:-translate-y-px"
+        >
+          <WhatsappLogo size={20} weight="fill" aria-hidden="true" />
+          Ask about availability
+        </a>
+      </div>
+    );
+  }
+
   const message = buildMessage({
     product,
     size,

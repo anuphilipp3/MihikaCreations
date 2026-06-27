@@ -19,7 +19,8 @@ const PROJECTION = `{
   "description": coalesce(description, ""),
   "image": coalesce(image.asset->url, ""),
   "bestSeller": coalesce(bestSeller, false),
-  "isNew": coalesce(isNew, false)
+  "isNew": coalesce(isNew, false),
+  stock
 }`;
 
 export async function getAllProducts(): Promise<Product[]> {
