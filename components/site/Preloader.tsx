@@ -36,15 +36,6 @@ export function Preloader() {
           exit={reduce ? { opacity: 0 } : { y: "-100%" }}
           transition={{ duration: reduce ? 0.4 : 0.9, ease: [0.76, 0, 0.24, 1] }}
         >
-          <motion.img
-            src="/mahika-logomark.png"
-            alt=""
-            aria-hidden="true"
-            className="mb-7 h-14 w-14 md:h-16 md:w-16"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.82 }}
-            animate={reduce ? { opacity: 1 } : { opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          />
           <motion.span
             role="img"
             aria-label="Mahika"
