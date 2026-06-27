@@ -7,7 +7,7 @@ import { schemaTypes } from "./schemaTypes";
 export default defineConfig({
   name: "mahika",
   title: "Mahika — Catalog",
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || "your-project-id",
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || "ifj10nrx",
   dataset: process.env.SANITY_STUDIO_DATASET || "production",
   plugins: [structureTool(), visionTool()],
   schema: { types: schemaTypes },
